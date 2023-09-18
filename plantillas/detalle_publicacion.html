@@ -1,0 +1,12 @@
+<!-- plantillas/detalle_publicacion.html -->
+
+{% extends '_base.html' %}
+
+{% block contenido %}
+
+    <div class="post-entry">
+        <h2>{{ publicacion.titulo }}</h2>
+        <p>{{ publicacion.cuerpo }}</p>
+    </div>
+
+{% endblock contenido %}
