@@ -15,7 +15,26 @@
     
     <header>
         <h1><a href="{% url 'inicio' %}">Blog de Django</a></h1>
+    
+
+    <div class="nav-right">
+        <a href="{%url 'pub_nuevo'%}">
+            + Nueva entrada de Blog</a>
+    
     </header>
+
+    {% if user.is_authenticated %}
+
+        <p>Hola {{user.username}} </p>
+        <p><a href="{% url 'logout' %}">Salir (cerrar sesion)</a></p>
+
+    {% else %}
+
+        <p>No ha ingresado</p>
+        <a href="{% url 'login' %}">Acceder (Iniciar sesion)</a>
+    
+    {% endif %}
+
     <div>
         {% block contenido %}
         {% endblock contenido %}

@@ -1,0 +1,12 @@
+<!-- plantillas/editar_pub.html -->
+
+{% extends '_base.html' %}
+
+{% block contenido %}
+<h2>Editar Entrada del blog</h2>
+<form action="" method="post">{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Modificar">
+    <input type="button" value="Regresar" onclick='location.href="{% url 'detalle_pub' publicacion.pk %}"'>
+</form>
+{% endblock contenido %}

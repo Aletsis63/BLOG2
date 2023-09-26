@@ -1,0 +1,13 @@
+<!-- plantillas/registration/login.html -->
+
+{% extends '_base.html' %}
+
+{% block contenido %}
+
+<h2>Acceder</h2>
+<form method="post">{% csrf_token %}
+    {{ form.as_p}}
+    <button type="submit">Acceder (Iniciar sesion) </button>
+</form>
+
+{% endblock contenido %}

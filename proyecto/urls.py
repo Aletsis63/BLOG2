@@ -19,4 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
+    path('cuentas/', include('django.contrib.auth.urls')),
+    #Tiene mas prioridad la que esta dentro del proyecto, que la del framework
+    path('cuentas/', include('cuentas.urls')), 
 ]
